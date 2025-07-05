@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="index,follow" />
+
+  <title>Rica Games - as melhores piadas da internet</title>
+  <meta name="description" content="😂 vamos rir com rica games! Humor, piadas, vídeos e muito mais." />
+  <meta name="keywords" content="piadas, memes, humor, rica games, vídeos engraçados" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #0f0f0f, #2a2a2a);
+      color: red;
+      font-family: 'Orbitron', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: red;
+      text-shadow: 2px 2px 8px #000;
+      font-size: 3em;
+    }
+
+    #video-container {
+      width: 100%;
+      max-width: 800px;
+      aspect-ratio: 16 / 9;
+      margin-bottom: 10px;
+      border: 4px solid red;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 30px #f0a500;
+      background-color: #000;
+    }
+
+    iframe, video {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    #video-title {
+      max-width: 800px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 25px;
+      color: red;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    button {
+      background-color: red;
+      border: none;
+      padding: 14px 30px;
+      color: #121212;
+      font-weight: 700;
+      cursor: pointer;
+      border-radius: 12px;
+      margin-bottom: 40px;
+      font-size: 18px;
+      box-shadow: 0 0 15px red;
+    }
+
+    button:hover {
+      background-color: #c78c00;
+      box-shadow: 0 0 25px #c78c00;
+    }
+
+    #unique-string {
+      max-width: 90%;
+      background-color: #222;
+      border-radius: 12px;
+      padding: 20px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 14px;
+      white-space: pre-wrap;
+      word-break: break-word;
+      color: #f0a500;
+      user-select: text;
+      margin-top: auto;
+      box-shadow: inset 0 0 10px #d8a500;
+    }
+
+    #propaganda-piscante {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #f0a500;
+      color: #121212;
+      font-weight: 700;
+      padding: 12px 18px;
+      border-radius: 14px;
+      font-size: 16px;
+      cursor: pointer;
+      animation: piscar 1s infinite alternate;
+      box-shadow: 0 0 20px #f0a500;
+      z-index: 1000;
+    }
+
+    @keyframes piscar {
+      0% {opacity: 1;}
+      100% {opacity: 0.3;}
+    }
+
+    @media (max-width: 600px) {
+      #video-container {
+        max-width: 100%;
+        aspect-ratio: auto;
+        height: 215px;
+      }
+
+      #video-title {
+        font-size: 18px;
+      }
+
+      #propaganda-piscante {
+        font-size: 14px;
+        padding: 8px 12px;
+        top: 10px;
+        right: 10px;
+      }
+    }
+
+    #tabela {
+      max-width: 800px;
+      font-size: 18px;
+      color: red;
+      text-align: left;
+      margin-bottom: 50px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 2px solid red;
+      padding: 12px;
+      vertical-align: top;
+      text-align: left;
+    }
+
+    th {
+      background-color: #1a1a1a;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Humor sem fim! Rica Games</h1>
+
+  <!-- Tabela de músicas -->
+  <div id="tabela">
+    <table id="novo">
+      <thead>
+        <tr>
+          <th>Nome da música</th>
+          <th>Letra da música</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Populado por JavaScript -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Vídeo e título -->
+  <div id="video-container"></div>
+  <div id="video-title">Carregando vídeo...</div>
+  <button onclick="trocarVideo()">Trocar Vídeo</button>
+
+  <!-- String única -->
+  <div id="unique-string">Carregando conteúdo exclusivo...</div>
+
+  <!-- Propaganda -->
+  <div id="propaganda-piscante">OFERTA IMPERDÍVEL!</div>
+
+  <!-- Scripts -->
+  <script>
+    const videos = [
+         {
+        tipo: "youtube",
+        src: "https://www.youtube.com/embed/jh-FIZksMk4",
+        titulo: "RICA GAMES REVOLTADO PARTE 2"
+      },
+         {
+        tipo: "youtube",
+        src: "https://www.youtube.com/embed/vyvI8W2ttYY",
+        titulo: "RICA GAMES REVOLTADO PARTE 1"
+      },
+         {
+        tipo: "youtube",
+        src: "https://www.youtube.com/embed/3oVxi_Q2MJI",
+        titulo: "rica games se irrita muito    dá ota tapa e xinga o pai dele"
+      },
+      {
+        tipo: "youtube",
+        src: "https://www.youtube.com/embed/m8K8uLqipoE",
+        titulo: "RICA GAMES NÃO AGUENTA MAIS SEU PAI NAS PANELAS DENOVO"
+      },
+       {
+        tipo: "youtube",
+        src: "https://www.youtube.com/embed/pSGD-QpNJkM",
+        titulo: "RICA GAMES pede que inscritos Açaçinem sua familia"
+      }
+    ];
+
+    const propagandas = [
+                "https://randomico02.vercel.app/",
+                "https://carro.wuaze.com/conferir/",
+                "https://geocredibnkvitoria.com/",
+                "https://hostinger.com.br/?REFERRALCODE=1VICTOR444",
+                "https://randomico02.vercel.app/",
+                "https://randomico02.netlify.app/",
+                "https://carro.wuaze.com/conferir/",
+                "https://arquivos.wuaze.com/conferir/",
+                "https://hostinger.com.br/?REFERRALCODE=1VICTOR444",
+                "https://geocredibnkvitoria.com/",
+                "https://jogosantigos472302513.wordpress.com/",
+                "https://brasilbrasileiross.blogspot.com/",
+                "https://ocomerciobrasileironoticia.blogspot.com/2025/05/erp-profissional-para-empresas.html",
+                "https://randomico02.vercel.app/",
+                "https://shoppingrandom01.vercel.app/",
+                "https://randomshopping.netlify.app/",
+                "https://vendaschamada.blogspot.com/",
+                "https://randomico02.netlify.app/",
+                "https://carro.wuaze.com/conferir/",
+                "https://arquivos.wuaze.com/conferir/",
+                "https://hostinger.com.br/?REFERRALCODE=1VICTOR444",
+                "https://geocredibnkvitoria.com/",
+                "https://jogosantigos472302513.wordpress.com/",
+                "https://brasilbrasileiross.blogspot.com/",
+                "https://ocomerciobrasileironoticia.blogspot.com/2025/05/erp-profissional-para-empresas.html",
+                "https://wa.me/5527999860405?text=Olá%2C%20tenho%20interesse%20em%20soluções%20de%20VPS%20e%20ERP.%20Pode%20me%20ajudar%3F",
+                "https://wa.me/5527999497001?text=ola%20quero%20saber%20sobre%20seguro%20e%20consorcio",
+                "https://nandomoura01random.vercel.app/",
+                "https://www.facebook.com/capixabadagemaes/",
+                "https://www.youtube.com/@gamenologia/videos",
+                "https://www.larissasaib.com.br/",
+                "https://www.instagram.com/geocredibnkvitoria/",
+                "https://www.youtube.com/watch?v=zjF_yzaEN9I&t=23s",
+                "https://www.youtube.com/watch?v=JbWY7nvpBA0",
+                "https://www.youtube.com/watch?v=qLsURrNcdf8",
+                "https://www.youtube.com/@byclixmidia1008",
+                "https://www.youtube.com/@gamenologia",
+                "https://jogosantigos472302513.wordpress.com/maquinas-vps-temos-todas-as-opcoes-de-maqinas-para-voce/",
+                "https://www.airbnb.com.br/r/saibvictore?s=6&t=061n0g",
+                "https://recomendadodia23.blogspot.com/",
+                "https://dokehost.blogspot.com/"
+    ];
+
+    function getRandomVideo() {
+      return videos[Math.floor(Math.random() * videos.length)];
+    }
+
+    function getRandomAdURL() {
+      return propagandas[Math.floor(Math.random() * propagandas.length)];
+    }
+
+    function trocarVideo() {
+      const videoData = getRandomVideo();
+      const container = document.getElementById('video-container');
+      const tituloEl = document.getElementById('video-title');
+
+      let videoHTML = '';
+
+      if (videoData.tipo === 'youtube') {
+        videoHTML = `<iframe 
+                      src="${videoData.src}" 
+                      frameborder="0" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                      allowfullscreen
+                      title="${videoData.titulo}">
+                    </iframe>`;
+      }
+
+      container.innerHTML = videoHTML;
+      tituloEl.textContent = videoData.titulo;
+    }
+
+    function gerarStringUnica(tamanho = 800) {
+      const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:,.<>?';
+      let resultado = '';
+      for(let i = 0; i < tamanho; i++) {
+        resultado += chars.charAt(Math.floor(Math.random() * chars.length));
+      }
+      return resultado;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      trocarVideo();
+      document.getElementById('unique-string').textContent = gerarStringUnica();
+      document.getElementById('propaganda-piscante').addEventListener('click', () => {
+        window.open(getRandomAdURL(), '_blank');
+      });
+
+      const musicas = [
+        {
+          nome: "Xbox para Filho Machão",
+          letra: `Eu pedi um playstation à mamãe
+A mamãe falou bem assim
+Eu pedi um playstation à minha mamãe
+A mamãe falou bem assim
+Filhinho, playstation é coisa de mulher
+Mulherzinha!
+Eu vou te dar um xbox, xbox é de machão
+É revolução!
+
+Xbox é fodão, é de machão, pegador de mulher!
+Pegador de mulher!
+Playstation é coisa de mulherzinha
+Meu filho, queridinho da mamãe!
+Mas mamãe, eu queria um playstation
+Ai mamãe, será que você me acha mulherzinha?
+Não, meu filhinho, pelo contrário
+Eu achei que você já era
+Mulherzinha, porque quer playstation
+
+Eu vou falar pro seu papai te dar um macronbook
+Ei! Você não quer xbox, xbox é revolução
+Eu vou te dar um xbox
+Ou fica de castigo
+
+Ai mamãe, será que você me acha mulherzinha?
+Não, meu filhinho, pelo contrário
+Eu achei que você já era
+Mulherzinha, porque quer playstation
+
+Eu vou falar pro seu papai te dar um macronbook
+Ei! Você não quer xbox, xbox é revolução
+Eu vou te dar um xbox!
+Ou fica de castigo!
+
+Porque você não quer xbox
+É revolução, eu vou te dar um xbox
+Ou fica de castigo!
+
+Um xbox
+Ou fica de castigo!`
+        }
+      ];
+
+      const tabela = document.querySelector("#novo tbody");
+      musicas.forEach(musica => {
+        const linha = document.createElement("tr");
+
+        const tdNome = document.createElement("td");
+        tdNome.textContent = musica.nome;
+
+        const tdLetra = document.createElement("td");
+        tdLetra.innerHTML = musica.letra.replace(/\n/g, "<br>");
+
+        linha.appendChild(tdNome);
+        linha.appendChild(tdLetra);
+        tabela.appendChild(linha);
+      });
+    });
+  </script>
+</body>
+</html>
